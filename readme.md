@@ -31,12 +31,14 @@ Run the scripts in the following order to reproduce the analysis:
     ```bash
     python 03_train_model.py
 
-4. **Train Offline RL Agent**: Trains a CQL (Conservative Q-Learning) agent using d3rlpy to optimize for profit. 
-*Note:* This agent uses a profit-maximizing reward function. Our analysis shows it learns an **aggressive policy**, frequently approving high-interest/high-risk borrowers to capture "Alpha" (potential profit) that the conservative DL model misses.
+4. **Train Offline RL Agent**: Trains a CQL (Conservative Q-Learning) agent using d3rlpy to optimize for profit.
+
+   *Note:* This agent uses a profit-maximizing reward function. Our analysis shows it learns an **aggressive policy**, frequently approving high-interest/high-risk borrowers to capture "Alpha" (potential profit) that
+   the conservative DL model misses.
     ```bash
     python 04_train_RL
 
-5. **Final Comparison & Analysis:** Evaluates both models on the test set and finds specific "Conflict Cases" where the RL agent disagrees with the DL model.
+6. **Final Comparison & Analysis:** Evaluates both models on the test set and finds specific "Conflict Cases" where the RL agent disagrees with the DL model.
     ```bash
     python 05_analysis.py
 
